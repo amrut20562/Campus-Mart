@@ -35,7 +35,7 @@ export default function RequestsPage() {
         .from('product_requests')
         .select(`
           *, 
-          profiles ( id, full_name, college ),
+          profiles:buyer_id ( id, full_name, college ),
           products ( id, title, image_path, price, seller_id )
         `)
         .order('created_at', { ascending: false });

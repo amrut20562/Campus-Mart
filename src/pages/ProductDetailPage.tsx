@@ -38,7 +38,7 @@ export default function ProductDetailPage() {
         .select(`
           *,
           categories ( id, name, slug, icon_key ),
-          profiles ( id, full_name, college, department, contact_text, created_at )
+          profiles:seller_id ( id, full_name, college, department, contact_text, created_at )
         `)
         .eq('id', id)
         .single();

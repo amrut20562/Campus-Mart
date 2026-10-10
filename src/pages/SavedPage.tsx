@@ -30,7 +30,7 @@ export default function SavedPage() {
           products (
             id, title, price, condition, status, image_path, created_at,
             categories ( name ),
-            profiles ( full_name, college )
+            profiles:seller_id ( full_name, college )
           )
         `)
         .eq('user_id', user!.id)

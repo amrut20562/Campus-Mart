@@ -40,7 +40,7 @@ export default function AdminPage() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from('products')
-        .select('id, title, price, status, is_hidden, created_at, seller_id, profiles(full_name)')
+        .select('id, title, price, status, is_hidden, created_at, seller_id, profiles:seller_id(full_name)')
         .order('created_at', { ascending: false });
       if (error) throw error;
       return (data ?? []) as unknown as (ProductRow & { profiles: { full_name: string } })[];
@@ -57,7 +57,7 @@ export default function AdminPage() {
         .select(`
           id, reason, status, details, created_at, reviewed_at,
           products ( id, title, status ),
-          profiles ( id, full_name, college )
+          profiles:reporter_id ( id, full_name, college )
         `)
         .order('created_at', { ascending: false });
       if (error) throw error;

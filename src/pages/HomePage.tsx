@@ -281,7 +281,7 @@ export default function HomePage() {
           id, seller_id, category_id, title, price, condition, status, image_path, created_at,
           transaction_mode, location_text,
           categories ( id, name, slug, icon_key ),
-          profiles ( id, full_name, college, department )
+          profiles:seller_id ( id, full_name, college, department )
         `)
         .eq('is_hidden', false);
 
