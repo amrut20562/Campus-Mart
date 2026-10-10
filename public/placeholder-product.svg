@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" fill="none">
+  <rect width="400" height="300" fill="#f7f7f7"/>
+  <rect x="1" y="1" width="398" height="298" stroke="#ebebeb" stroke-width="2"/>
+  <!-- Camera / item outline icon -->
+  <g transform="translate(160, 110)" stroke="#b5b5b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 28h56a4 4 0 0 0 4-4V14a4 4 0 0 0-4-4h-8l-4-6H24l-4 6h-8a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4z"/>
+    <circle cx="40" cy="19" r="8"/>
+  </g>
+  <text x="200" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="13" font-weight="500" fill="#b5b5b5" text-anchor="middle" letter-spacing="-0.01em">
+    No Image Available
+  </text>
+</svg>
