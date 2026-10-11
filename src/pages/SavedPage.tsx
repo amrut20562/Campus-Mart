@@ -108,9 +108,10 @@ export default function SavedPage() {
               onClick={() => removeMutation.mutate(product_id)}
               disabled={removeMutation.isPending}
               aria-label={`Remove ${product.title} from saved`}
-              className="absolute top-2 right-2 w-8 h-8 flex items-center justify-center bg-card rounded-full border border-hairline-gray"
+              className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center bg-card rounded-full border border-hairline-gray"
+              style={{ width: '24px', height: '24px' }}
             >
-              <Heart size={14} className="text-gallery-black fill-gallery-black" aria-hidden />
+              <Heart size={24} className="text-gallery-black fill-gallery-black" aria-hidden />
             </button>
           </div>
         ))}

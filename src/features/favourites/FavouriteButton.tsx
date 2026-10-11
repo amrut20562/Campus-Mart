@@ -69,10 +69,11 @@ export default function FavouriteButton({ productId }: FavouriteButtonProps) {
       <Link
         to="/login"
         aria-label="Log in to save this product"
-        className="w-8 h-8 flex items-center justify-center bg-card rounded-full border border-hairline-gray"
+        className="w-6 h-6 flex items-center justify-center bg-card rounded-full border border-hairline-gray"
+        style={{ width: '24px', height: '24px' }}
         onClick={(e) => e.stopPropagation()}
       >
-        <Heart size={14} className="text-ash-gray" aria-hidden />
+        <Heart size={24} className="text-ash-gray" aria-hidden />
       </Link>
     );
   }
@@ -84,10 +85,11 @@ export default function FavouriteButton({ productId }: FavouriteButtonProps) {
       aria-label={isFav ? 'Remove from saved' : 'Save product'}
       aria-pressed={isFav}
       disabled={loading}
-      className="w-8 h-8 flex items-center justify-center bg-card rounded-full border border-hairline-gray transition-opacity hover:opacity-80 disabled:opacity-40"
+      className="w-6 h-6 flex items-center justify-center bg-card rounded-full border border-hairline-gray transition-opacity hover:opacity-80 disabled:opacity-40"
+      style={{ width: '24px', height: '24px' }}
     >
       <Heart
-        size={14}
+        size={24}
         className={isFav ? 'text-gallery-black fill-gallery-black' : 'text-ash-gray'}
         aria-hidden
       />

@@ -107,7 +107,7 @@ export default function MyListingsPage() {
 
       {isLoading && (
         <div className="flex flex-col gap-2">
-          {[...Array(3)].map((_, i) => <div key={i} className="skeleton h-24 rounded" />)}
+          {[...Array(3)].map((_, i) => <div key={i} className="skeleton h-[152px] rounded" />)}
         </div>
       )}
 
@@ -136,8 +136,10 @@ export default function MyListingsPage() {
             <img
               src={getProductImageUrl(product.image_path)}
               alt={product.title}
-              className="w-16 h-16 object-cover shrink-0"
-              style={{ borderRadius: '2px' }}
+              width={120}
+              height={120}
+              className="w-[120px] h-[120px] object-cover shrink-0"
+              style={{ borderRadius: '2px', width: '120px', height: '120px' }}
               onError={(e) => { (e.target as HTMLImageElement).src = '/placeholder-product.svg'; }}
             />
 
