@@ -292,12 +292,12 @@ export default function HomePage() {
         q = q.in('status', ['available', 'reserved']);
       }
 
-      // Full-text search via generated tsvector (PROD-02)
+      // Search across title and description (PROD-02)
       if (search.trim()) {
-        q = q.textSearch('fts', search.trim().split(/\s+/).join(' & '), {
-          type: 'websearch',
-          config: 'english',
-        });
+        const cleanTerm = search.trim().replace(/[%_,()]/g, ' ').trim();
+        if (cleanTerm) {
+          q = q.or(`title.ilike.%${cleanTerm}%,description.ilike.%${cleanTerm}%`);
+        }
       }
 
       // Category filter (PROD-03)
